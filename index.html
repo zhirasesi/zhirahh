@@ -1,0 +1,496 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhiraHosting</title>
+    <meta name="description" content="zhirastoreid.me menyediakan panel pterodactyl atau biasa disebut dengan hosting minecraft. server sudah menggunakan yang terbaik, dan terawat. pembayaran hanya melalui QRIS dengan sistem pembayaran otomatis">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zhirastoreid.me">
+    <meta property="og:title" content="ZhiraHosting">
+    <meta property="og:description" content="zhirastoreid.me menyediakan panel pterodactyl atau biasa disebut dengan hosting minecraft. server sudah menggunakan yang terbaik, dan terawat. pembayaran hanya melalui QRIS dengan sistem pembayaran otomatis">
+    <meta name="keywords" content="penyedia panel pterodactyl atau hosting minecraft">
+    <meta name="twitter:image" content="https://zhirastoreid.me/zhirastoreid/zhirahosting.png">
+    <meta property="og:image" content="https://zhirastoreid.me/zhirastoreid/zhirahosting.png">
+    <meta name="robots" content="index, follow">
+    <meta content="desktop" name="device">
+    <meta name="author" content="ZhiraHosting">
+    <meta name="coverage" content="Worldwide">
+    <meta name="apple-mobile-web-app-title" content="ZhiraHosting">
+    	
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 6px 0px;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .section-header .number {
+            background-color: #00ff00;
+            color: #000;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .section-header .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .input-group span {
+            font-size: 13px;
+            color: #ff4d4d;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 6px 0px;
+            color: #000;
+            outline: none;
+        }
+        .top-up-instant {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .top-up-instant .item {
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 6px 0px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+            min-width: 220px;
+        }
+        .top-up-instant .item.selected {
+            border-color: #00ff00;
+        }
+        .top-up-instant .item .selected-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #00ff00;
+            font-size: 24px;
+            display: none;
+        }
+        .top-up-instant .item.selected .selected-icon {
+            display: block;
+        }
+        .top-up-instant .item .name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .top-up-instant .item .details {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .zhira-coret {
+        	text-decoration: line-through;
+            font-weight: bold;
+            font-size: 14px;
+            color: #ff4500;
+        }
+        .top-up-instant .item .price {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+        }
+        .checkout-btn {
+            background-color: #00ff00;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhiraHosting</title>
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff00;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #00ff00;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            color: #00ff00;
+        }
+        .menu-icon, .search-icon {
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+            display: none;
+            font-weight: bold;
+        }
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 6px 0px;
+            padding: 20px;
+            transition: left 0.3s ease;
+            z-index: 99;
+        }
+        .close-icon {
+          font-size: 30px;
+        }
+        .nav-menu.active {
+            left: 0;
+        }
+        .nav-menu .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .nav-menu .nav-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff00;
+            margin-bottom: 20px;
+        }
+        .nav-a {
+          text-decoration: none;
+          color: #00ff00;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-link i {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-icon, .search-icon {
+                display: block;
+            }
+            .search-input {
+                display: none;
+                margin-top: 10px;
+                width: calc(100% - 40px);
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-icon, .search-icon {
+                display: none;
+            }
+            .search-input {
+                display: block;
+            }
+        }
+    </style>
+
+
+    <div class="header">
+        <div class="menu-icon" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path></svg>
+        </div>
+        <div class="logo">
+          <a class="nav-a" href="">
+          	<img src="https://zhirastoreid.me/zhirastoreid/zhirahostingg.png" alt="" width="150" onclick="window.location='https://zhirastoreid.me'">
+          	</a>
+        </div>
+        <div class="nav-links">
+            <a href="https://zhirastoreid.me" class="nav-link" onclick="selectNavLink(this)"><i class="uil uil-estate"></i> Home</a>
+            <a href="https://zhirastoreid.me" class="nav-link" onclick="selectNavLink(this)"><i class="uil uil-box"></i> Products</a>
+            <a href="https://whatsapp.com/channel/0029VahrqzpLikg5fIvNPT3k" class="nav-link" onclick="selectNavLink(this)"><i class="uil uil-info-circle"></i> Testimoni</a>
+            <a href="https://chat.whatsapp.com/C9WPDKmuPRLAU8i7m07bJo" class="nav-link" onclick="selectNavLink(this)"><i class="uil uil-info-circle"></i> Digitalmarketplace</a>
+            <a href="mailto:zhirastore1@gmail.com" class="nav-link" onclick="selectNavLink(this)"><i class="uil uil-envelope"></i> Contact</a>
+        </div>
+    </div>
+    <div class="nav-menu" id="navMenu">
+        <div class="close-icon" onclick="toggleMenu()"><i class="uil uil-times"></i></div>
+        <div class="nav-logo">
+          <a class="nav-a" href="">
+          	<img src="https://zhirastoreid.me/zhirastoreid/zhirahostingg.png" alt="" width="150" onclick="window.location='https://zhirastoreid.me'">
+          	</a>
+        </div>
+        <a href="https://zhirastoreid.me" class="nav-link"><i class="uil uil-estate"></i> Home</a>
+        <a href="https://zhirastoreid.me" class="nav-link"><i class="uil uil-box"></i> Products</a>
+        <a href="https://whatsapp.com/channel/0029VahrqzpLikg5fIvNPT3k" class="nav-link"><i class="uil uil-whatsapp"></i> Testimoni</a>
+        <a href="https://chat.whatsapp.com/C9WPDKmuPRLAU8i7m07bJo" class="nav-link"><i class="uil uil-whatsapp"></i> Digitalmarketplace</a>
+        <a href="mailto:zhirastore1@gmail.com" class="nav-link"><i class="uil uil-envelope"></i> Contact</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        function toggleSearch() {
+            document.querySelector('.search-icon').classList.toggle('active');
+        }
+
+        function selectNavLink(link) {
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        }
+    </script>
+
+
+
+
+    <div class="container">
+        <div class="section">
+            <div class="section-header">
+                <div class="title">Isi detail akun</div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:<span>*</span></label>
+                <input type="email" id="email" placeholder="Masukkan email Anda">
+            </div>
+            <div class="input-group">
+                <label for="username">Username:<span>*</span></label>
+                <input type="text" id="username" placeholder="Masukkan username Anda">
+            </div>
+            
+            <div class="section-header">     
+                <div class="title">Silakan pilih paket</div>
+            </div>
+
+            <div class="top-up-instant">
+                
+                    <div class="item" data-id="1" data-memory="1024" data-disk="1024" data-cpu="30" data-price="1000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 1GB</div>
+                        <div class="details">Memory: 1024MB<br>Disk: 1024MB<br>Cpu: 30%</div>
+                        <div class="price">Rp1.000</div>
+                    </div>
+                
+                    <div class="item" data-id="2" data-memory="2048" data-disk="2048" data-cpu="50" data-price="2000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 2GB</div>
+                        <div class="details">Memory: 2048MB<br>Disk: 2048MB<br>Cpu: 50%</div>
+                        <div class="price">Rp2.000</div>
+                    </div>
+                
+                    <div class="item" data-id="3" data-memory="3048" data-disk="3048" data-cpu="75" data-price="3000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 3GB</div>
+                        <div class="details">Memory: 3048MB<br>Disk: 3048MB<br>Cpu: 75%</div>
+                        <div class="price">Rp3.000</div>
+                    </div>
+                
+                    <div class="item" data-id="4" data-memory="4048" data-disk="4048" data-cpu="100" data-price="4000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 4GB</div>
+                        <div class="details">Memory: 4048MB<br>Disk: 4048MB<br>Cpu: 100%</div>
+                        <div class="price">Rp4.000</div>
+                    </div>
+                
+                    <div class="item" data-id="5" data-memory="5048" data-disk="5048" data-cpu="125" data-price="5000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 5GB</div>
+                        <div class="details">Memory: 5048MB<br>Disk: 5048MB<br>Cpu: 125%</div>
+                        <div class="price">Rp5.000</div>
+                    </div>
+                
+                    <div class="item" data-id="6" data-memory="6048" data-disk="6048" data-cpu="150" data-price="6000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 6GB</div>
+                        <div class="details">Memory: 6048MB<br>Disk: 6048MB<br>Cpu: 150%</div>
+                        <div class="price">Rp6.000</div>
+                    </div>
+                
+                    <div class="item" data-id="7" data-memory="7048" data-disk="7048" data-cpu="175" data-price="7000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 7GB</div>
+                        <div class="details">Memory: 7048MB<br>Disk: 7048MB<br>Cpu: 175%</div>
+                        <div class="price">Rp7.000</div>
+                    </div>
+                
+                    <div class="item" data-id="8" data-memory="8048" data-disk="8048" data-cpu="200" data-price="8000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 8GB</div>
+                        <div class="details">Memory: 8048MB<br>Disk: 8048MB<br>Cpu: 200%</div>
+                        <div class="price">Rp8.000</div>
+                    </div>
+                
+                    <div class="item" data-id="9" data-memory="9048" data-disk="9048" data-cpu="225" data-price="9000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 9GB</div>
+                        <div class="details">Memory: 9048MB<br>Disk: 9048MB<br>Cpu: 225%</div>
+                        <div class="price">Rp9.000</div>
+                    </div>
+                
+                    <div class="item" data-id="10" data-memory="10048" data-disk="10048" data-cpu="250" data-price="10000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package 10GB</div>
+                        <div class="details">Memory: 10048MB<br>Disk: 10048MB<br>Cpu: 250%</div>
+                        <div class="price">Rp10.000</div>
+                    </div>
+                
+                    <div class="item" data-id="11" data-memory="0" data-disk="0" data-cpu="0" data-price="6000" onclick="selectPlan(this)">
+                        <i class="uil uil-check-circle selected-icon"></i>
+                        <div class="name">Package Unlimited</div>
+                        <div class="details">Memory: 0MB<br>Disk: 0MB<br>Cpu: 0%</div>
+                        <div class="zhira-coret">Rp10.000</div>
+                        <div class="price">Rp6.000</div>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="checkout-btn" id="checkoutBtn" onclick="initiateCheckout()"><i class="uil-shopping-cart-alt"> Pesan Sekarang</div></i>
+    </div>
+    <center>
+    <i>2025 ©ZhiraHosting - Dev</i>
+    </center>
+    &nbsp;
+<script>
+    let selectedPlan = null;
+
+    function selectPlan(element) {
+        selectedPlan = element;
+        const items = document.querySelectorAll('.top-up-instant .item');
+        items.forEach(item => item.classList.remove('selected'));
+        element.classList.add('selected');
+        toggleCheckoutButton();
+    }
+
+    function toggleCheckoutButton() {
+        const email = document.getElementById('email').value;
+        const username = document.getElementById('username').value;
+        if (email && username && selectedPlan) {
+            document.getElementById('checkoutBtn').style.display = 'block';
+        } else {
+            document.getElementById('checkoutBtn').style.display = 'none';
+        }
+    }
+
+    async function initiateCheckout() {
+        const email = document.getElementById('email').value;
+        const username = document.getElementById('username').value;
+        const price = selectedPlan.dataset.price;
+
+        try {
+            const response = await fetch('/api/checkout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, username, price })
+            });
+            
+            const data = await response.json();
+            
+            if (!response.ok) {
+                console.error('Server error:', data.error);
+                alert(`Gagal memulai proses checkout: ${data.error}`);
+                return;
+            }
+
+            if (data.transactionId) {
+                window.location.href = `/invoice/${data.transactionId}`;
+            } else {
+                alert('Gagal memulai proses checkout.');
+            }
+        } catch (error) {
+            console.error('Error during checkout process:', error);
+            alert('Terjadi kesalahan saat melakukan checkout.');
+        }
+    }
+
+    document.getElementById('email').addEventListener('input', toggleCheckoutButton);
+    document.getElementById('username').addEventListener('input', toggleCheckoutButton);
+</script>
+
+
+</body></html>
